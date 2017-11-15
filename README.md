@@ -24,7 +24,9 @@ While our project board is public, we don't expect anyone other than our project
 
 
 ### Our DevOps manual
-
+ - [AWS Build Standards](AWSBuildStandards.md)
+ - [AWS Naming Standards](AWSNamingStandards.md)
+ - [AWS Tagging Standards](AWSTaggingStandards.md)
 > Insert link once the repository has been created
 
 ### Project show and tells
@@ -38,6 +40,7 @@ We have completed the following tech demos:
 * [Basic Terraform automation using Drone](https://github.com/UKHomeOffice/dq-terraform-demo)
 * [Ubuntu Nginx AMI built with Packer](https://github.com/UKHomeOffice/dq-packer-demo)
 * [Windows IIS AMI built with Packer](https://github.com/UKHomeOffice/dq-packer-win-demo)
+* [Connectivity Tester](https://github.com/UKHomeOffice/connectivity-tester)
 
 ## Credits
 
