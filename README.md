@@ -41,6 +41,7 @@ We have completed the following tech demos:
 * [Ubuntu Nginx AMI built with Packer](https://github.com/UKHomeOffice/dq-packer-demo)
 * [Windows IIS AMI built with Packer](https://github.com/UKHomeOffice/dq-packer-win-demo)
 * [Connectivity Tester](https://github.com/UKHomeOffice/connectivity-tester)
+* [Terraform Test Runner](https://github.com/UKHomeOffice/tf-testrunner)
 
 ## Credits
 
