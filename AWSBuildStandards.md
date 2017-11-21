@@ -17,7 +17,7 @@ Phases
 
 | Code | Group | Standard | How we will test | When we will test |
 | ---- | ---- | --- | --- | --- |
-| GEN01 | General | All resources must be built within the EU Ireland region - eu-west-1. | automation/linter | 1 |
+| GEN01 | General | All resources must be built within the EU London region - eu-west-2. | automation/linter | 1 |
 | GEN02 | General | Do not build any resources upon the default AWS network resources i.e. default VPCs, default Route Tables, default Subnets, default Network Access Control Lists, default Internet Gateways or default VPC Security Groups. As these resources are not managed by Terraform (which makes them hard to discover) and because the security groups by default provide open (insecure) access. | automation check against the aws api | 99 |
 | GEN03 | General | It is everyone\'s responsibility to help manage costs within the cloud. Where redundant resources are identified, flag their existence to the architects within the System Team who will take actions to remove them. | manual | 99 |
 | GEN04 | General | The Sandpit account is for proof of concepts / testing and trialing new software and build patterns. Users of this environment should remove resources once they are no longer required, and use it with the knowledge that resources may be remove at any time as part of automated housekeeping scripts. | manual | 99 |
@@ -56,7 +56,7 @@ Phases
 | TAG03 | Tagging | All resources must have an \"Environment\" tag, this must be set to the name of the environment that the resource belongs to (in lowercase) e.g. prp1, see [AWS Tagging Standards](AWSTaggingStandards.md). | automation/linter | 99 |
 | TAG04 | Tagging | All resources must have an \"EnvironmentZone\" tag, this must be set to the name of the zone (within an environment) that the resource belongs to (in lowercase) e.g. dazo, see [AWS Tagging Standards](AWSTaggingStandards.md). | automation/linter | 99 |
 | TAG05 | Tagging | All resources must have an \"Owner\" tag, this must always be set to \"Terraform\" when infrastructure is built using Terraform, see [AWS Tagging Standards](AWSTaggingStandards.md). | automation/linter | 99 |
-| TAG06 | Tagging | All resources must have an \"Region\" tag, this must always be set to \"eu-west-1\", see [AWS Tagging Standards](AWSTaggingStandards.md). | won't | 99 |
+| TAG06 | Tagging | All resources must have an \"Region\" tag, this must always be set to \"eu-west-2\", see [AWS Tagging Standards](AWSTaggingStandards.md). | won't | 99 |
 | TAG07 | Tagging | All resources must have a \"Product\" tag, this must always be set to *\<a value that is sensitive\>*, see [AWS Tagging Standards](AWSTaggingStandards.md). | won't | 99 |
 | TAG08 | Tagging | All resources must have a \"CreatedBy\" tag, set to the id of the person creating / updating the resource, this must be all lowercase and comprise of the persons surname then initial e.g. bloggsj, see [AWS Tagging Standards](AWSTaggingStandards.md). | won't | 99 |
 | TAG09 | Tagging | All EC2 resources must have a \"Service\" tag, this must be set to the name of the service the host or ELB is providing (not the hostname) | automation/linter | 99 |
