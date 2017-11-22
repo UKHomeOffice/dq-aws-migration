@@ -41,9 +41,9 @@ Phases
 | ESG01 | EC2 - Security Groups | Never create any ingress rules that are open to the internet unless the rules are for an ingress service within an Internet Boundary Control. | automation/linter | 99 |
 | ESG02 | EC2 - Security Groups | All security groups must have a single open egress rule i.e. protocol = -1 (All), from port = 0, to port = 0 and cidr block = 0.0.0.0/0. | automation | 2 |
 | ESG03 | EC2 - Security Groups | All security group ingress rules (except rules that manage external ingress into a boundary control from outside) must reference a source security group associated to the resource calling the service, as opposed to using a CIDR block e.g. an ingress rule on an EC2 instance would reference the security group of the ELB in front of the EC2 instance as a source security group. | automation/linter | 99 |
-| ESG04 | EC2 - Security Groups | All EC2 instances must have at least 3 security groups associated to them: | automation/linter | 2 |
+| ESG04 | EC2 - Security Groups | All EC2 instances must have at least ~~3~~2 security groups associated to them: | automation/linter | 2 |
 | | | - A VPC security group - e.g. ?? - to allow SSH and key operations tooling e.g. Zabbix / Puppet to communicate with all instances within a VPC | automation/linter| 2 |
-| | | - An environment zone security group - e.g. ?? - to hold all rules that enable services to communicate with all instances within a zone | |
+| | | - ~~An environment zone security group - e.g. ?? - to hold all rules that enable services to communicate with all instances within a zone~~ | |
 | | | - Service security group - e.g. ?? - to hold all rules that enable communication with that service | |
 | | | N.B. A service security group must not contain SSH on port 22, as it must be enabled by the VPC security group. | |
 | ESG05 | EC2 - Security Groups | All security group \"Group Ids\" must be given humanly readable names - the same as their \"Name\" tags. This will enable debugging security groups much simpler, as you can then see which security group is related as opposed to which security group id is related. | manual | 99 |
