@@ -1,4 +1,4 @@
-Tags enable us to c ategorize AWS resources in different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value so we can quickly identify a specific resource based on the tags assigned. It is important that we deploy a consistent set of tags across all resources to meet reporting and billing requirements. To meet this requirement we have the following defined standards.
+Tags enable us to categorize AWS resources in different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value so we can quickly identify a specific resource based on the tags assigned. It is important that we deploy a consistent set of tags across all resources to meet reporting and billing requirements. To meet this requirement we have the following defined standards.
 
 #Common Tags
 
@@ -8,10 +8,11 @@ The following tags should be applied to all AWS resources that support tagging:
 | --- | --- | ---|
 | Name | Refer to [AWS Naming Standards](AWSNamingStandards.md) | The Name tag should comply with the IPT AWS Naming Standards |
 | Environment | `prp1`, `prd1`| The name of the environment that the resource belongs to. This should be the environment name in shorthand form, in lowercase and postfixed with a number. |
-| EnvironmentZone | dazo | The name of the zone (within an environment) that the resource belongs to, in lowercase. |
-| Owner | Terraform | The owner responsible for managing the resource. |
-| Region | eu-west-2 | The region that the resource belongs to. |
-| Product | (Value omitted as it is sensitive) | See architects for this value. |
+| EnvironmentGroup | dazo | The name of the group (within an environment) that the resource belongs to, in lowercase. |
+| Service | dq-bastions | The name of the service that the resource is. |
+
+Refer to the **AWS-DQ-Network-Routing** spreadsheet to populate these tags with the correct values for the project.
+
 
 #EC2 Tags
 
