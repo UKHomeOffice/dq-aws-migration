@@ -2,6 +2,8 @@ To ensure consistency and visibility within AWS all resources should be tagged (
 
 It should be noted that a number of AWS resources cannot be renamed after creation so it is important to ensure the resource adheres to the standard on creation.
 
+For the correct naming values, refer to the **AWS-DQ-Network-Routing** spreadsheet in Dropbox.
+
 The following variables are referenced in the naming standards:
 
 | Naming Variable | Description | Example |
@@ -14,8 +16,6 @@ The following variables are referenced in the naming standards:
 | `{#}` | unique number where multiple resources exist | 1,2,3 |
 | `{az}` | availability zone number | 1a, 1b, 1c |
 
-
-N.B. Service names are documented within the instance definition list on the following page - Infrastructure Logical Design
 
 Core AWS Services Naming
 ------------------------
